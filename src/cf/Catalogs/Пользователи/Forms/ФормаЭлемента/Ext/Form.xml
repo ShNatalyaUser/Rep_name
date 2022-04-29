@@ -5,7 +5,6 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
-		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -41,16 +40,6 @@
 			<ContextMenu name="ПарольКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<InputField name="ТипПользователя" id="16">
-			<DataPath>Объект.ТипПользователя</DataPath>
-			<ContextMenu name="ТипПользователяКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="ТипПользователяРасширеннаяПодсказка" id="18"/>
-		</InputField>
-		<LabelField name="ИдентификаторПользователяИБ" id="19">
-			<DataPath>Объект.ИдентификаторПользователяИБ</DataPath>
-			<ContextMenu name="ИдентификаторПользователяИБКонтекстноеМеню" id="20"/>
-			<ExtendedTooltip name="ИдентификаторПользователяИБРасширеннаяПодсказка" id="21"/>
-		</LabelField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
