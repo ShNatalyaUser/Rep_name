@@ -16,8 +16,8 @@
 			<Metadata name="Catalog.Пользователи.Attribute.Пароль" id="7a954555-a27c-4320-857c-2b80e00834ef"/>
 			<Metadata name="Catalog.Пользователи.Attribute.ИдентификаторПользователяИБ" id="da55062e-15ed-4541-80e2-60b9a7fc9dd3"/>
 		</Metadata>
-		<Metadata name="Catalog.Пользователи.Form.ФормаЭлемента" id="2579d8fe-a067-4e08-b1c7-42c10e26e5b6" configVersion="c5a4b33f6cbcec4988daa1cedb5e5aa800000000"/>
-		<Metadata name="Catalog.Пользователи.Form.ФормаЭлемента.Form" id="2579d8fe-a067-4e08-b1c7-42c10e26e5b6.0" configVersion="7206ef8980eb43478d280df6d5527e5e00000000"/>
+		<Metadata name="Catalog.Пользователи.Form.ФормаЭлемента" id="2579d8fe-a067-4e08-b1c7-42c10e26e5b6" configVersion="e0a8f8d443d44b4daba3ee92c6007a5f00000000"/>
+		<Metadata name="Catalog.Пользователи.Form.ФормаЭлемента.Form" id="2579d8fe-a067-4e08-b1c7-42c10e26e5b6.0" configVersion="df60513b6a44d64696ea034c6da3e8a600000000"/>
 		<Metadata name="Catalog.Препараты" id="d80faa8a-7a0e-426c-a464-2507e80fddf9" configVersion="e4fb73b60b5bdb419b5e66a6b933915a00000000">
 			<Metadata name="Catalog.Препараты.Attribute.ФормаВыпуска" id="89492350-e3f2-4154-a77a-357baf610578"/>
 			<Metadata name="Catalog.Препараты.TabularSection.Противопоказания" id="8fcb501f-84d4-4881-98bb-7cbc17174560"/>
