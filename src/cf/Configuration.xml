@@ -232,6 +232,7 @@
 			<Catalog>Пользователи</Catalog>
 			<Catalog>Пациенты</Catalog>
 			<Catalog>ФизЛица</Catalog>
+			<Catalog>ТипыПользователей</Catalog>
 			<Document>СхемаЛеченияКонкретногоПациента</Document>
 			<Enum>Пол</Enum>
 			<Enum>СостояниеЗдоровья</Enum>
