@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Table name="СписокАналогов" id="39">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокАналогов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокАналоговКонтекстноеМеню" id="40"/>
+			<AutoCommandBar name="СписокАналоговКоманднаяПанель" id="41">
+				<ChildItems>
+					<Button name="ДобавитьПрепаратыБезАналогов" id="35">
+						<Type>CommandBarButton</Type>
+						<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+						<CommandName>Form.Command.ДобавитьПрепаратыБезАналогов</CommandName>
+						<ExtendedTooltip name="ДобавитьПрепаратыБезАналоговРасширеннаяПодсказка" id="36"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокАналоговРасширеннаяПодсказка" id="42"/>
+			<SearchStringAddition name="СписокАналоговСтрокаПоиска" id="43">
+				<AdditionSource>
+					<Item>СписокАналогов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговСтрокаПоискаКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокАналоговСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокАналоговСостояниеПросмотра" id="46">
+				<AdditionSource>
+					<Item>СписокАналогов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговСостояниеПросмотраКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокАналоговСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокАналоговУправлениеПоиском" id="49">
+				<AdditionSource>
+					<Item>СписокАналогов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговУправлениеПоискомКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокАналоговУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">СписокАналоговПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокАналоговНомерСтроки" id="52">
+					<DataPath>Объект.СписокАналогов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговНомерСтрокиКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СписокАналоговНомерСтрокиРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<InputField name="СписокАналоговПрепарат" id="55">
+					<DataPath>Объект.СписокАналогов.Препарат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговПрепаратКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СписокАналоговПрепаратРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<CheckBoxField name="СписокАналоговАналог" id="58">
+					<DataPath>Объект.СписокАналогов.Аналог</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокАналоговАналогКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="СписокАналоговАналогРасширеннаяПодсказка" id="60"/>
+				</CheckBoxField>
+				<InputField name="СписокАналоговПриоритет" id="61">
+					<DataPath>Объект.СписокАналогов.Приоритет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговПриоритетКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="СписокАналоговПриоритетРасширеннаяПодсказка" id="63"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="ОчиститьТаблицу" id="37">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОчиститьТаблицу</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОчиститьТаблицуРасширеннаяПодсказка" id="38"/>
+		</Button>
+		<Table name="СписокАналоговЗеркальный" id="64">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокАналоговЗеркальный</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокАналоговЗеркальныйКонтекстноеМеню" id="65"/>
+			<AutoCommandBar name="СписокАналоговЗеркальныйКоманднаяПанель" id="66">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокАналоговЗеркальныйРасширеннаяПодсказка" id="67"/>
+			<SearchStringAddition name="СписокАналоговЗеркальныйСтрокаПоиска" id="68">
+				<AdditionSource>
+					<Item>СписокАналоговЗеркальный</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговЗеркальныйСтрокаПоискаКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="СписокАналоговЗеркальныйСтрокаПоискаРасширеннаяПодсказка" id="70"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокАналоговЗеркальныйСостояниеПросмотра" id="71">
+				<AdditionSource>
+					<Item>СписокАналоговЗеркальный</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговЗеркальныйСостояниеПросмотраКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="СписокАналоговЗеркальныйСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокАналоговЗеркальныйУправлениеПоиском" id="74">
+				<AdditionSource>
+					<Item>СписокАналоговЗеркальный</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокАналоговЗеркальныйУправлениеПоискомКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="СписокАналоговЗеркальныйУправлениеПоискомРасширеннаяПодсказка" id="76"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокАналоговЗеркальныйНомерСтроки" id="77">
+					<DataPath>Объект.СписокАналоговЗеркальный.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговЗеркальныйНомерСтрокиКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="СписокАналоговЗеркальныйНомерСтрокиРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<InputField name="СписокАналоговЗеркальныйПрепарат" id="80">
+					<DataPath>Объект.СписокАналоговЗеркальный.Препарат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговЗеркальныйПрепаратКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="СписокАналоговЗеркальныйПрепаратРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="СписокАналоговЗеркальныйАналог" id="83">
+					<DataPath>Объект.СписокАналоговЗеркальный.Аналог</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговЗеркальныйАналогКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="СписокАналоговЗеркальныйАналогРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="СписокАналоговЗеркальныйПриоритет" id="86">
+					<DataPath>Объект.СписокАналоговЗеркальный.Приоритет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокАналоговЗеркальныйПриоритетКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="СписокАналоговЗеркальныйПриоритетРасширеннаяПодсказка" id="88"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДобавлениеАналогов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьПрепаратыБезАналогов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить препараты без аналогов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить препараты без аналогов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПрепаратыБезАналогов</Action>
+		</Command>
+		<Command name="ОчиститьТаблицу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьТаблицу</Action>
+		</Command>
+	</Commands>
+</Form>
