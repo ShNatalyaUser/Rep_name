@@ -21,6 +21,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Пользователи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВводДанныхВБазу</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДобавлениеАналогов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

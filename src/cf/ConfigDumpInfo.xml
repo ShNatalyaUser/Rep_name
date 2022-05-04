@@ -94,7 +94,7 @@
 		<Metadata name="DataProcessor.ПоискАналогов.ObjectModule" id="a4925252-1692-4247-a178-49d4ccc2e839.0" configVersion="a69adc235803a540956872ddc1f89d8000000000"/>
 		<Metadata name="DataProcessor.ПоискАналогов.Template.Макет" id="4caf3285-8e20-45b2-91e2-2f49efde4eb8" configVersion="50a9dbc72f5272409a50abc713971fd400000000"/>
 		<Metadata name="DataProcessor.ПоискАналогов.Template.Макет.Template" id="4caf3285-8e20-45b2-91e2-2f49efde4eb8.0" configVersion="bab9ae522d106d4c921e65cf396e2b3b00000000"/>
-		<Metadata name="Document.ДобавлениеАналогов" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e" configVersion="49616450faa36d46a73ad2fdf6ec054a00000000">
+		<Metadata name="Document.ДобавлениеАналогов" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e" configVersion="4fd1a7d12a9c1b4cbbded3a48c37454500000000">
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналогов.Attribute.Препарат" id="0680b449-f6d4-4901-9f87-19f1d8bb5631"/>
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналогов" id="3d2b0060-af6d-46f0-b6a0-9ae89cdeb21f"/>
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналоговЗеркальный" id="3e6522fb-3cc2-46e8-9c92-f3a210307440"/>
@@ -105,9 +105,9 @@
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналоговЗеркальный.Attribute.Аналог" id="981bf8a5-ee1c-419c-807c-2bd650f3ee61"/>
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналогов.Attribute.Аналог" id="d8e34924-d3a7-43e9-b47a-af382403fdef"/>
 		</Metadata>
-		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента" id="238e9793-fdf5-46bc-8af2-b386fd493628" configVersion="79cfad44545be04591e80854bd4fd26800000000"/>
-		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента.Form" id="238e9793-fdf5-46bc-8af2-b386fd493628.0" configVersion="1a048b84d5a4884a920c1c730bb52e8200000000"/>
-		<Metadata name="Document.ДобавлениеАналогов.ObjectModule" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e.0" configVersion="bda71ca6725c99459be720f8e30d6c6100000000"/>
+		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента" id="238e9793-fdf5-46bc-8af2-b386fd493628" configVersion="0e7149d3b9dc9147aaafaf4aaa80cfd900000000"/>
+		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента.Form" id="238e9793-fdf5-46bc-8af2-b386fd493628.0" configVersion="725a9679a111d84580243d117f1a3cb500000000"/>
+		<Metadata name="Document.ДобавлениеАналогов.ObjectModule" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e.0" configVersion="2b3dabbb4ddd4c4cbda04f471a6dce2700000000"/>
 		<Metadata name="Document.СхемаЛеченияКонкретногоПациента" id="260b43a0-4cd4-4efa-91ab-10f30dcb8140" configVersion="2d26cba970c7c34c830a4a188d8a0bdd00000000">
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения" id="052174a1-2633-4bab-bd5c-10b5b9425aa1"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Attribute.ДлительностьЛечения" id="5c63bd95-ca83-433b-a361-0f6c5410afbe"/>
@@ -164,7 +164,7 @@
 		<Metadata name="Role.ПолныеПрава.Rights" id="a2e3488e-9d63-4088-a9d2-9a22de9fb417.0" configVersion="00a93baa00602841b198ef8bfb06896f00000000"/>
 		<Metadata name="Style.Стиль" id="4a51ae5f-caa6-48cb-bbb6-97001f489158" configVersion="697f22c50dc21e47996cc17adb7927ae00000000"/>
 		<Metadata name="Style.Стиль.Style" id="4a51ae5f-caa6-48cb-bbb6-97001f489158.0" configVersion="9acd26838c590649a225a29ca0f3685400000000"/>
-		<Metadata name="Subsystem.Администрирование" id="e5ec2033-3b78-4d19-93f6-4a2950f4cd8b" configVersion="1ef0d1e318578e4a8c4c226e1782b63400000000"/>
+		<Metadata name="Subsystem.Администрирование" id="e5ec2033-3b78-4d19-93f6-4a2950f4cd8b" configVersion="1c1192715f77b647aff59f3ea27d288700000000"/>
 		<Metadata name="Subsystem.ВводДанныхЛечения" id="c0cc076a-55bf-4804-b4d9-3e7c1df07fd2" configVersion="bc0b00ccd2c51649941f5c69a68cc48a00000000"/>
 		<Metadata name="Subsystem.Отчеты" id="20da6c2c-c34a-48bc-988c-f6c28d10a342" configVersion="6bc98063886d534e9909966f1586f25b00000000"/>
 		<Metadata name="Subsystem.СправочнаяИнформация" id="26997c80-9e8b-4388-8f5d-20669b4a3de3" configVersion="41845393ed4f444aa07275c6b9dffa5900000000"/>
