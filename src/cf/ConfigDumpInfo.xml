@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
 	<ConfigVersions>
-		<Metadata name="Catalog.Диагнозы" id="3bc7753c-51cb-4ef6-844f-4622023aa96d" configVersion="5bab0f7fa9542d43927bddf926eec10000000000">
-			<Metadata name="Catalog.Диагнозы.Attribute.Симптомы" id="56a5d7c5-0045-4055-a5f3-412758d920ae"/>
+		<Metadata name="Catalog.Диагнозы" id="3bc7753c-51cb-4ef6-844f-4622023aa96d" configVersion="dd2ed8a457b7fb4aa876d3a016c282b300000000">
+			<Metadata name="Catalog.Диагнозы.TabularSection.Симптомы.Attribute.Симптом" id="44e6a3f6-2134-4591-90a9-347369f401cb"/>
+			<Metadata name="Catalog.Диагнозы.TabularSection.Симптомы" id="8a490b47-d466-4bf9-9758-864fe72c2762"/>
 		</Metadata>
 		<Metadata name="Catalog.ДопХарактиристикиПациента" id="730c7c98-19e5-4e41-860c-5a0154c56b5f" configVersion="46bbfe14a42fab4f92d858759171ab4200000000">
 			<Metadata name="Catalog.ДопХарактиристикиПациента.Attribute.Возраст" id="dab1e556-3f16-4791-94c1-2324f89a4103"/>
@@ -51,36 +52,36 @@
 			<Metadata name="Catalog.ФизЛица.Attribute.Телефон" id="bcbadfc2-922e-4c5c-b38f-5064108a4868"/>
 			<Metadata name="Catalog.ФизЛица.Attribute.ФИО" id="fd424e11-e2dc-4659-b701-4126c0174b4d"/>
 		</Metadata>
-		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="49c6e27c-1945-4396-9a7b-3f898968b02b" configVersion="22e985654c68a74c8ef49af3e4646bb200000000"/>
-		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="49c6e27c-1945-4396-9a7b-3f898968b02b.0" configVersion="71c087da054c6a4ea486947821287c5600000000"/>
-		<Metadata name="Configuration.АС_Подбора_ЛС" id="7962971c-bb2d-413c-9ef4-00d8b47cc3cf" configVersion="a49d71326997a441a0004ded48f6d07c00000000"/>
-		<Metadata name="Configuration.АС_Подбора_ЛС.ClientApplicationInterface" id="84b3e4e1-e909-4672-bfa0-661b287182f9.b" configVersion="7b0456797945b74d8bb1228b75fdd95c00000000"/>
-		<Metadata name="Configuration.АС_Подбора_ЛС.HomePageWorkArea" id="84b3e4e1-e909-4672-bfa0-661b287182f9.8" configVersion="80e6c45c53369742b82797fc4c049a0700000000"/>
-		<Metadata name="DataProcessor.ВводДанныхВБазу" id="d3d424fc-32d4-446a-9dfe-248a4b1a8da0" configVersion="b706c30129292b4e9dbc57630e6f147900000000">
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="49c6e27c-1945-4396-9a7b-3f898968b02b" configVersion="637154d22e78ab4c92327a82e15412e800000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="49c6e27c-1945-4396-9a7b-3f898968b02b.0" configVersion="0d67802b0a8b6640a9c18732bc245c1000000000"/>
+		<Metadata name="Configuration.АС_Подбора_ЛС" id="7962971c-bb2d-413c-9ef4-00d8b47cc3cf" configVersion="96b2ff6faa0d7e47ba8e55ef0be6c98e00000000"/>
+		<Metadata name="Configuration.АС_Подбора_ЛС.ClientApplicationInterface" id="84b3e4e1-e909-4672-bfa0-661b287182f9.b" configVersion="bf204a9931dc2b4a9214a5c301158d1800000000"/>
+		<Metadata name="Configuration.АС_Подбора_ЛС.HomePageWorkArea" id="84b3e4e1-e909-4672-bfa0-661b287182f9.8" configVersion="7ffc3d35a0b2e247a02ac878c764508800000000"/>
+		<Metadata name="DataProcessor.ВводДанныхВБазу" id="d3d424fc-32d4-446a-9dfe-248a4b1a8da0" configVersion="aa77358c1a0e6847a96ec633860d8e4500000000">
 			<Metadata name="DataProcessor.ВводДанныхВБазу.TabularSection.СписокАналогов.Attribute.Препарат" id="04940b3c-cbb9-411b-8db5-79a7eceab150"/>
 			<Metadata name="DataProcessor.ВводДанныхВБазу.TabularSection.СписокАналогов.Attribute.ЕстьОшибка" id="08e34e32-b8c6-4c58-aa6f-9c2c05714888"/>
 			<Metadata name="DataProcessor.ВводДанныхВБазу.TabularSection.СписокАналогов" id="767f400f-ae06-42b6-b4f3-42fabf52f1bb"/>
 			<Metadata name="DataProcessor.ВводДанныхВБазу.TabularSection.СписокАналогов.Attribute.Аналог" id="f6a8daa5-e038-49e0-9f53-89e9480996ff"/>
 		</Metadata>
-		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.Форма" id="1723dce2-ea83-4a4e-97c7-8ee4d195549d" configVersion="a68aef584756374b9afd3d907412076800000000"/>
-		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.Форма.Form" id="1723dce2-ea83-4a4e-97c7-8ee4d195549d.0" configVersion="ea0e1362942568498e59a82c0cf3e27500000000"/>
-		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.ФормаАналогов" id="80d00ac0-b524-4a00-91c2-e41f694f582e" configVersion="723eecfcc4eb3c41beb332c46f4635cc00000000"/>
-		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.ФормаАналогов.Form" id="80d00ac0-b524-4a00-91c2-e41f694f582e.0" configVersion="083882838acda541adf329d33efac52a00000000"/>
-		<Metadata name="DataProcessor.ВводДанныхПациента" id="bb908640-4747-446d-aa4f-3c4f353874f9" configVersion="81380b7608295b4888c43445af9863e600000000">
+		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.Форма" id="1723dce2-ea83-4a4e-97c7-8ee4d195549d" configVersion="0527738aa161594eb64157df7ccb2b9700000000"/>
+		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.Форма.Form" id="1723dce2-ea83-4a4e-97c7-8ee4d195549d.0" configVersion="59e7f9ed7d5cb8468c9da4a5ac9d43aa00000000"/>
+		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.ФормаАналогов" id="80d00ac0-b524-4a00-91c2-e41f694f582e" configVersion="32237cb419b2a04585de950044402cd700000000"/>
+		<Metadata name="DataProcessor.ВводДанныхВБазу.Form.ФормаАналогов.Form" id="80d00ac0-b524-4a00-91c2-e41f694f582e.0" configVersion="35a171d75e5a214e81fe6830942b5e3c00000000"/>
+		<Metadata name="DataProcessor.ВводДанныхПациента" id="bb908640-4747-446d-aa4f-3c4f353874f9" configVersion="508692476fa47d40a5c4f975cc9eb5cb00000000">
 			<Metadata name="DataProcessor.ВводДанныхПациента.Attribute.Пол" id="0e58e7d6-a8ef-4d4a-b73a-822d306a360f"/>
 			<Metadata name="DataProcessor.ВводДанныхПациента.TabularSection.СхемыЛечений" id="15ba5d5d-e842-4231-bd63-84c4cd9fb5fc"/>
-			<Metadata name="DataProcessor.ВводДанныхПациента.TabularSection.СхемыЛечений.Attribute.Схемы" id="684c846c-caad-4a58-ac9b-8ecd7db91713"/>
+			<Metadata name="DataProcessor.ВводДанныхПациента.TabularSection.СхемыЛечений.Attribute.Схема" id="684c846c-caad-4a58-ac9b-8ecd7db91713"/>
 			<Metadata name="DataProcessor.ВводДанныхПациента.TabularSection.СхемыЛечений.Attribute.КатегорияЭффективности" id="a0a6a588-9ae4-464a-bacf-acc55b5040b3"/>
 			<Metadata name="DataProcessor.ВводДанныхПациента.TabularSection.СхемыЛечений.Attribute.Выбор" id="aba70757-435e-4644-9c73-0a8d590436f6"/>
 			<Metadata name="DataProcessor.ВводДанныхПациента.Attribute.Возраст" id="ce51bffc-fdc5-4887-8098-5015da514ee4"/>
 			<Metadata name="DataProcessor.ВводДанныхПациента.Attribute.Диагноз" id="eda1de16-edc2-47f0-a4ef-adf2b17ba73f"/>
 		</Metadata>
-		<Metadata name="DataProcessor.ВводДанныхПациента.Form.Форма" id="7ffe39d3-b60c-4a69-bc9d-982e31001a54" configVersion="ecdb6114d491544c9cde5e6ab261006600000000"/>
-		<Metadata name="DataProcessor.ВводДанныхПациента.Form.Форма.Form" id="7ffe39d3-b60c-4a69-bc9d-982e31001a54.0" configVersion="8d5ae98147d80a48b82f52fa7f8361c000000000"/>
-		<Metadata name="DataProcessor.ПодборЛС" id="f0d3f8f0-faee-4705-ba58-25f905d66f16" configVersion="d57adb8f559fd64f989af794d05ab04f00000000"/>
-		<Metadata name="DataProcessor.ПодборЛС.Form.Форма" id="203daa96-dd84-48a2-9d3b-fffaeabb7ea3" configVersion="bf3325732908db4eba9aeb8c3b5332e300000000"/>
-		<Metadata name="DataProcessor.ПодборЛС.Form.Форма.Form" id="203daa96-dd84-48a2-9d3b-fffaeabb7ea3.0" configVersion="a4b25d3564e47446af0585c5306090f100000000"/>
-		<Metadata name="DataProcessor.ПоискАналогов" id="a4925252-1692-4247-a178-49d4ccc2e839" configVersion="043a1425c2cfb646a90c0a85d71418ce00000000">
+		<Metadata name="DataProcessor.ВводДанныхПациента.Form.Форма" id="7ffe39d3-b60c-4a69-bc9d-982e31001a54" configVersion="0c4ea19d3d11144e92d2c539e4e5592000000000"/>
+		<Metadata name="DataProcessor.ВводДанныхПациента.Form.Форма.Form" id="7ffe39d3-b60c-4a69-bc9d-982e31001a54.0" configVersion="0b4738a3caf5de4d9e7fa3ea74c0fd2a00000000"/>
+		<Metadata name="DataProcessor.ПодборЛС" id="f0d3f8f0-faee-4705-ba58-25f905d66f16" configVersion="68659e37b3f34240be0a4dfabd39936100000000"/>
+		<Metadata name="DataProcessor.ПодборЛС.Form.Форма" id="203daa96-dd84-48a2-9d3b-fffaeabb7ea3" configVersion="858835815d0b25409f29e26f080d088200000000"/>
+		<Metadata name="DataProcessor.ПодборЛС.Form.Форма.Form" id="203daa96-dd84-48a2-9d3b-fffaeabb7ea3.0" configVersion="6734fc48c9f3614ba601de9b7220d0d000000000"/>
+		<Metadata name="DataProcessor.ПоискАналогов" id="a4925252-1692-4247-a178-49d4ccc2e839" configVersion="63f23ba106d08a4ba91a3140c28c10f300000000">
 			<Metadata name="DataProcessor.ПоискАналогов.TabularSection.СписокПрепаратов.Attribute.Дженерик" id="09cd6f5d-b65a-4a01-80a9-1a0a578cb142"/>
 			<Metadata name="DataProcessor.ПоискАналогов.TabularSection.СписокПрепаратов.Attribute.Аналог" id="3b18b492-3fde-44fe-9df6-8d556c568934"/>
 			<Metadata name="DataProcessor.ПоискАналогов.Attribute.Препарат" id="5ba34ae1-6b6d-451e-9737-900d70fddb7a"/>
@@ -105,21 +106,22 @@
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналоговЗеркальный.Attribute.Аналог" id="981bf8a5-ee1c-419c-807c-2bd650f3ee61"/>
 			<Metadata name="Document.ДобавлениеАналогов.TabularSection.СписокАналогов.Attribute.Аналог" id="d8e34924-d3a7-43e9-b47a-af382403fdef"/>
 		</Metadata>
-		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента" id="238e9793-fdf5-46bc-8af2-b386fd493628" configVersion="4b20370d87df1f4ab724cd74e47f5bc600000000"/>
-		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента.Form" id="238e9793-fdf5-46bc-8af2-b386fd493628.0" configVersion="5178ca616ce06041b70653ee578d490500000000"/>
-		<Metadata name="Document.ДобавлениеАналогов.ObjectModule" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e.0" configVersion="c683cf0c27b2bf43b4fa2a0e68058f8a00000000"/>
-		<Metadata name="Document.СхемаЛеченияКонкретногоПациента" id="260b43a0-4cd4-4efa-91ab-10f30dcb8140" configVersion="96a1795788a4d245a2346668950d017000000000">
+		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента" id="238e9793-fdf5-46bc-8af2-b386fd493628" configVersion="0e7149d3b9dc9147aaafaf4aaa80cfd900000000"/>
+		<Metadata name="Document.ДобавлениеАналогов.Form.ФормаДокумента.Form" id="238e9793-fdf5-46bc-8af2-b386fd493628.0" configVersion="725a9679a111d84580243d117f1a3cb500000000"/>
+		<Metadata name="Document.ДобавлениеАналогов.ObjectModule" id="538d8d46-10d7-4b04-a970-3ebb287f9a9e.0" configVersion="2b3dabbb4ddd4c4cbda04f471a6dce2700000000"/>
+		<Metadata name="Document.СхемаЛеченияКонкретногоПациента" id="260b43a0-4cd4-4efa-91ab-10f30dcb8140" configVersion="0c63d2837df4a44083efd97ebba8cc9200000000">
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения" id="052174a1-2633-4bab-bd5c-10b5b9425aa1"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Attribute.ДлительностьЛечения" id="5c63bd95-ca83-433b-a361-0f6c5410afbe"/>
+			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Attribute.РезультатЛечения" id="6366b212-c2c3-495b-8aa8-4f25dfa16e67"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения.Attribute.ДатаНачалаПриема" id="7eb7ae79-718d-44c3-a1e6-0c90d9e98aad"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Attribute.СостояниеЗдоровья" id="83c4d257-4eea-451c-8df8-2d3c06a625cc"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения.Attribute.ДатаОкончанияПриема" id="c49e239f-eccc-459f-8e86-31251f093f2c"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения.Attribute.Дозировка" id="e1773903-30e8-4328-be69-13bcacbca60c"/>
 			<Metadata name="Document.СхемаЛеченияКонкретногоПациента.TabularSection.СхемаЛечения.Attribute.Препарат" id="fec94fba-e7f9-4bc0-9b21-b7d2d64d4897"/>
 		</Metadata>
-		<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Form.ФормаДокумента" id="8fd385ef-37b0-458c-8fce-f01eca5fa274" configVersion="d416e95103a4c142ae5567e66812ef4a00000000"/>
-		<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Form.ФормаДокумента.Form" id="8fd385ef-37b0-458c-8fce-f01eca5fa274.0" configVersion="751e2c9f48dab74b88e13d4f3ead9eee00000000"/>
-		<Metadata name="Enum.КлассыПрепаратов" id="592d93c0-2f5a-4aca-a9c5-793d723be9c3" configVersion="078ae83fde16ea4bb30f87f8e067b1fa00000000">
+		<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Form.ФормаДокумента" id="8fd385ef-37b0-458c-8fce-f01eca5fa274" configVersion="bb84fa4403abe54f816bcba5f713864a00000000"/>
+		<Metadata name="Document.СхемаЛеченияКонкретногоПациента.Form.ФормаДокумента.Form" id="8fd385ef-37b0-458c-8fce-f01eca5fa274.0" configVersion="1e883994342b274bbbd270fb7c1ce8bf00000000"/>
+		<Metadata name="Enum.КлассыПрепаратов" id="592d93c0-2f5a-4aca-a9c5-793d723be9c3" configVersion="883f97ab070e3c44aa631dbb95f2014900000000">
 			<Metadata name="Enum.КлассыПрепаратов.EnumValue.Ноотропы" id="13f2b4da-a5fc-4f91-bc46-342cb034ff8e"/>
 			<Metadata name="Enum.КлассыПрепаратов.EnumValue.Нормотимики" id="4a137e72-00ee-4940-b009-3a1b297b4ad3"/>
 			<Metadata name="Enum.КлассыПрепаратов.EnumValue.Нейролептики" id="5837846a-a082-47b2-b24d-96e7bfb6a64d"/>
@@ -137,7 +139,12 @@
 			<Metadata name="Enum.Приоритеты.EnumValue.Четвёртый" id="b3c94bf5-7ce2-4070-840d-a97f7e2e3b57"/>
 			<Metadata name="Enum.Приоритеты.EnumValue.Первый" id="e3de82aa-28fc-4241-8e40-dcef89338df5"/>
 		</Metadata>
-		<Metadata name="Enum.СостояниеЗдоровья" id="28e5eaa9-d3b0-4fa7-8a8a-8c2dd0a7f826" configVersion="fb540aedab6b57418dbd7310c1b446a800000000">
+		<Metadata name="Enum.РезультатЛечения" id="6747e30a-5df5-4025-9332-1f6df9b6ede1" configVersion="eb40eff9c39a1b4a9ba48e807db586e300000000">
+			<Metadata name="Enum.РезультатЛечения.EnumValue.Неэффективное" id="2e92a8d7-cbf7-4fd0-ae52-94b9fe5920a2"/>
+			<Metadata name="Enum.РезультатЛечения.EnumValue.Эффективное" id="5686857a-c3f9-470b-8996-2e8fbbb6e9bc"/>
+			<Metadata name="Enum.РезультатЛечения.EnumValue.ЛечениеНеЗакончено" id="6771d2af-1532-4d1d-82a0-33dd3fd302e4"/>
+		</Metadata>
+		<Metadata name="Enum.СостояниеЗдоровья" id="28e5eaa9-d3b0-4fa7-8a8a-8c2dd0a7f826" configVersion="f9f99af356357946ab4ee55ec3fd448c00000000">
 			<Metadata name="Enum.СостояниеЗдоровья.EnumValue.Критическое" id="03525d26-8134-4a4c-82e4-5564cba3859a"/>
 			<Metadata name="Enum.СостояниеЗдоровья.EnumValue.Плохое" id="77282b17-dc07-4901-b362-1c61529722b5"/>
 			<Metadata name="Enum.СостояниеЗдоровья.EnumValue.Удовлетворительное" id="79543e80-a210-47f7-ba3f-41a2c442f9a2"/>
@@ -155,9 +162,11 @@
 			<Metadata name="InformationRegister.АналогиПрепаратов.Dimension.Аналог" id="303474cc-9be9-4dca-b832-3fc6fe57e57e"/>
 			<Metadata name="InformationRegister.АналогиПрепаратов.Dimension.Препарат" id="b9ef84ee-bb75-4efb-8c81-acd60177da4d"/>
 		</Metadata>
-		<Metadata name="InformationRegister.РезультатЛечения" id="1b91940e-8ae4-40fa-9207-a408f48bb006" configVersion="6e52ed3416c3cb40bec47065be9bff5400000000">
-			<Metadata name="InformationRegister.РезультатЛечения.Dimension.СхемаЛеченияКонкретногоПациента" id="87cc04a6-41e6-4129-abea-4024a3a4ce55"/>
+		<Metadata name="InformationRegister.РезультатЛечения" id="1b91940e-8ae4-40fa-9207-a408f48bb006" configVersion="a364ffd7aba1ff40ae80075410242d9d00000000">
+			<Metadata name="InformationRegister.РезультатЛечения.Dimension.Диагноз" id="1c1cc96e-545a-4cec-b9c4-d2819a3be034"/>
 			<Metadata name="InformationRegister.РезультатЛечения.Resource.Эффективное" id="97b6db60-238c-4ba8-820e-84ba34a31da7"/>
+			<Metadata name="InformationRegister.РезультатЛечения.Dimension.Пациент" id="98825c09-3d84-42bd-a044-b32a87c4b549"/>
+			<Metadata name="InformationRegister.РезультатЛечения.Dimension.СхемаЛечения" id="b042c0fb-83d8-4359-b40a-e378f4bf3d35"/>
 		</Metadata>
 		<Metadata name="Language.Русский" id="c127a627-a93b-4be2-9e18-f97154b75b7d" configVersion="78829b2cee47ae4a85820560ed5aea3000000000"/>
 		<Metadata name="Role.ПолныеПрава" id="a2e3488e-9d63-4088-a9d2-9a22de9fb417" configVersion="85cec8bac9f02b429583cf5cc880e65f00000000"/>

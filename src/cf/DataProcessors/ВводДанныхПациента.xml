@@ -161,11 +161,11 @@
 				<ChildObjects>
 					<Attribute uuid="684c846c-caad-4a58-ac9b-8ecd7db91713">
 						<Properties>
-							<Name>Схемы</Name>
+							<Name>Схема</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Схемы</v8:content>
+									<v8:content>Схема</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
