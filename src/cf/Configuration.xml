@@ -240,6 +240,7 @@
 			<Enum>КлассыПрепаратов</Enum>
 			<Enum>ФормыВыпуска</Enum>
 			<Enum>Приоритеты</Enum>
+			<Enum>РезультатЛечения</Enum>
 			<DataProcessor>ПоискАналогов</DataProcessor>
 			<DataProcessor>ВводДанныхПациента</DataProcessor>
 			<DataProcessor>ПодборЛС</DataProcessor>
