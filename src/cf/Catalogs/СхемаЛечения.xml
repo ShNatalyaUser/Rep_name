@@ -129,21 +129,21 @@
 			</Attribute>
 			<TabularSection uuid="4b8226d6-8382-4b05-9dba-a073a314c7b2">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.СхемаЛечения.Схема" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.СхемаЛечения.СписокПрепаратов" category="TabularSection">
 						<xr:TypeId>037846a7-ec2c-490e-8d5a-de07dd00c1ed</xr:TypeId>
 						<xr:ValueId>ab377e20-9ac5-45a9-a333-bb472f13872e</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.СхемаЛечения.Схема" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.СхемаЛечения.СписокПрепаратов" category="TabularSectionRow">
 						<xr:TypeId>e8b1f581-2463-496e-a73f-02e51cf0e66b</xr:TypeId>
 						<xr:ValueId>0a010bb8-f0f0-4187-a67e-a8c4ef2c5926</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>Схема</Name>
+					<Name>СписокПрепаратов</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Схема</v8:content>
+							<v8:content>Список препаратов</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -230,55 +230,13 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="863f01b0-e7d8-489a-b5f0-37efd7fa3c26">
-						<Properties>
-							<Name>Очередность</Name>
-							<Synonym>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Очередность</v8:content>
-								</v8:item>
-							</Synonym>
-							<Comment/>
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>10</v8:Digits>
-									<v8:FractionDigits>0</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-							<PasswordMode>false</PasswordMode>
-							<Format/>
-							<EditFormat/>
-							<ToolTip/>
-							<MarkNegatives>false</MarkNegatives>
-							<Mask/>
-							<MultiLine>false</MultiLine>
-							<ExtendedEdit>false</ExtendedEdit>
-							<MinValue xsi:nil="true"/>
-							<MaxValue xsi:nil="true"/>
-							<FillChecking>DontCheck</FillChecking>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks/>
-							<ChoiceParameters/>
-							<QuickChoice>Auto</QuickChoice>
-							<CreateOnInput>Auto</CreateOnInput>
-							<ChoiceForm/>
-							<LinkByType/>
-							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-							<Indexing>DontIndex</Indexing>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
 					<Attribute uuid="b24a1703-3c77-4715-8377-1bfb6a516cce">
 						<Properties>
-							<Name>Интервал</Name>
+							<Name>СКакогоДня</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Интервал</v8:content>
+									<v8:content>С какого дня</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>

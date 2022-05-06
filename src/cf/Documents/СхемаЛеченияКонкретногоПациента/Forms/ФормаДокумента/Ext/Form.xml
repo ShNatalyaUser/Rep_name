@@ -20,6 +20,16 @@
 			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<InputField name="Пациент" id="82">
+			<DataPath>Объект.Пациент</DataPath>
+			<ContextMenu name="ПациентКонтекстноеМеню" id="83"/>
+			<ExtendedTooltip name="ПациентРасширеннаяПодсказка" id="84"/>
+		</InputField>
+		<InputField name="Диагноз" id="85">
+			<DataPath>Объект.Диагноз</DataPath>
+			<ContextMenu name="ДиагнозКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="ДиагнозРасширеннаяПодсказка" id="87"/>
+		</InputField>
 		<InputField name="СостояниеЗдоровья" id="7">
 			<DataPath>Объект.СостояниеЗдоровья</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -69,70 +79,102 @@
 			<ContextMenu name="РезультатЛеченияКонтекстноеМеню" id="45"/>
 			<ExtendedTooltip name="РезультатЛеченияРасширеннаяПодсказка" id="46"/>
 		</RadioButtonField>
-		<Table name="СхемаЛечения" id="13">
-			<Representation>List</Representation>
+		<UsualGroup name="ГруппаСхема" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа схема</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа схема</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСхемаРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<InputField name="СхемаЛечения" id="47">
+					<DataPath>Объект.СхемаЛечения</DataPath>
+					<ContextMenu name="СхемаЛеченияКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СхемаЛеченияРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">СхемаЛеченияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="ЗаполнитьДокументПоСхеме" id="80">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьДокументПоСхеме</CommandName>
+					<ExtendedTooltip name="ЗаполнитьДокументПоСхемеРасширеннаяПодсказка" id="81"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокПрепаратов" id="50">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.СхемаЛечения</DataPath>
+			<DataPath>Объект.СписокПрепаратов</DataPath>
 			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СхемаЛеченияКонтекстноеМеню" id="14"/>
-			<AutoCommandBar name="СхемаЛеченияКоманднаяПанель" id="15"/>
-			<ExtendedTooltip name="СхемаЛеченияРасширеннаяПодсказка" id="16"/>
-			<SearchStringAddition name="СхемаЛеченияСтрокаПоиска" id="17">
+			<ContextMenu name="СписокПрепаратовКонтекстноеМеню" id="51"/>
+			<AutoCommandBar name="СписокПрепаратовКоманднаяПанель" id="52"/>
+			<ExtendedTooltip name="СписокПрепаратовРасширеннаяПодсказка" id="53"/>
+			<SearchStringAddition name="СписокПрепаратовСтрокаПоиска" id="54">
 				<AdditionSource>
-					<Item>СхемаЛечения</Item>
+					<Item>СписокПрепаратов</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СхемаЛеченияСтрокаПоискаКонтекстноеМеню" id="18"/>
-				<ExtendedTooltip name="СхемаЛеченияСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+				<ContextMenu name="СписокПрепаратовСтрокаПоискаКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="СписокПрепаратовСтрокаПоискаРасширеннаяПодсказка" id="56"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СхемаЛеченияСостояниеПросмотра" id="20">
+			<ViewStatusAddition name="СписокПрепаратовСостояниеПросмотра" id="57">
 				<AdditionSource>
-					<Item>СхемаЛечения</Item>
+					<Item>СписокПрепаратов</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СхемаЛеченияСостояниеПросмотраКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="СхемаЛеченияСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+				<ContextMenu name="СписокПрепаратовСостояниеПросмотраКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="СписокПрепаратовСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СхемаЛеченияУправлениеПоиском" id="23">
+			<SearchControlAddition name="СписокПрепаратовУправлениеПоиском" id="60">
 				<AdditionSource>
-					<Item>СхемаЛечения</Item>
+					<Item>СписокПрепаратов</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СхемаЛеченияУправлениеПоискомКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СхемаЛеченияУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="СписокПрепаратовУправлениеПоискомКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="СписокПрепаратовУправлениеПоискомРасширеннаяПодсказка" id="62"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="СхемаЛеченияНомерСтроки" id="26">
-					<DataPath>Объект.СхемаЛечения.LineNumber</DataPath>
+				<LabelField name="СписокПрепаратовНомерСтроки" id="63">
+					<DataPath>Объект.СписокПрепаратов.LineNumber</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СхемаЛеченияНомерСтрокиКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="СхемаЛеченияНомерСтрокиРасширеннаяПодсказка" id="28"/>
+					<ContextMenu name="СписокПрепаратовНомерСтрокиКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="СписокПрепаратовНомерСтрокиРасширеннаяПодсказка" id="65"/>
 				</LabelField>
-				<InputField name="СхемаЛеченияПрепарат" id="29">
-					<DataPath>Объект.СхемаЛечения.Препарат</DataPath>
+				<InputField name="СписокПрепаратовПрепарат" id="66">
+					<DataPath>Объект.СписокПрепаратов.Препарат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СхемаЛеченияПрепаратКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="СхемаЛеченияПрепаратРасширеннаяПодсказка" id="31"/>
+					<ContextMenu name="СписокПрепаратовПрепаратКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СписокПрепаратовПрепаратРасширеннаяПодсказка" id="68"/>
 				</InputField>
-				<InputField name="СхемаЛеченияДозировка" id="32">
-					<DataPath>Объект.СхемаЛечения.Дозировка</DataPath>
+				<InputField name="СписокПрепаратовОписание" id="69">
+					<DataPath>Объект.СписокПрепаратов.Описание</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СхемаЛеченияДозировкаКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="СхемаЛеченияДозировкаРасширеннаяПодсказка" id="34"/>
+					<ContextMenu name="СписокПрепаратовОписаниеКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СписокПрепаратовОписаниеРасширеннаяПодсказка" id="71"/>
 				</InputField>
-				<InputField name="СхемаЛеченияДатаНачалаПриема" id="35">
-					<DataPath>Объект.СхемаЛечения.ДатаНачалаПриема</DataPath>
+				<InputField name="СписокПрепаратовДатаНачалаПриема" id="72">
+					<DataPath>Объект.СписокПрепаратов.ДатаНачалаПриема</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СхемаЛеченияДатаНачалаПриемаКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="СхемаЛеченияДатаНачалаПриемаРасширеннаяПодсказка" id="37"/>
+					<ContextMenu name="СписокПрепаратовДатаНачалаПриемаКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="СписокПрепаратовДатаНачалаПриемаРасширеннаяПодсказка" id="74"/>
 				</InputField>
-				<InputField name="СхемаЛеченияДатаОкончанияПриема" id="38">
-					<DataPath>Объект.СхемаЛечения.ДатаОкончанияПриема</DataPath>
+				<InputField name="СписокПрепаратовДатаОкончанияПриема" id="75">
+					<DataPath>Объект.СписокПрепаратов.ДатаОкончанияПриема</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СхемаЛеченияДатаОкончанияПриемаКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="СхемаЛеченияДатаОкончанияПриемаРасширеннаяПодсказка" id="40"/>
+					<ContextMenu name="СписокПрепаратовДатаОкончанияПриемаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СписокПрепаратовДатаОкончанияПриемаРасширеннаяПодсказка" id="77"/>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -160,4 +202,21 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьДокументПоСхеме" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить документ по схеме</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить документ по схеме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДокументПоСхеме</Action>
+		</Command>
+	</Commands>
 </Form>
