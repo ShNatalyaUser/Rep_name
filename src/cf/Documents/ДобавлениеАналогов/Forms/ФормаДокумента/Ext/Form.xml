@@ -38,7 +38,12 @@
 					</Button>
 					<Button name="СписокАналоговЗагрузитьИзExcel" id="89">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ЗагрузитьИзExcel</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.SpreadsheetInsertComment</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="СписокАналоговЗагрузитьИзExcelРасширеннаяПодсказка" id="90"/>
 					</Button>
 				</ChildItems>

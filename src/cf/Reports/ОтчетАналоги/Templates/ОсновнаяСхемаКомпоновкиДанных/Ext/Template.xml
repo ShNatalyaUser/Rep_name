@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Препарат</dataPath>
+			<field>Препарат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Препарат</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дженерик</dataPath>
+			<field>Дженерик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дженерик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоДженерик</dataPath>
+			<field>ЭтоДженерик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это дженерик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоАналог</dataPath>
+			<field>ЭтоАналог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это аналог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналог</dataPath>
+			<field>Аналог</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле1</dataPath>
+			<field>Поле1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Препараты.Ссылка КАК Ссылка,
+	Препараты.ДействующееВещество КАК ДействующееВещество
+ПОМЕСТИТЬ ВТ_Препараты1
+ИЗ
+	Справочник.Препараты КАК Препараты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Препараты.Ссылка КАК Ссылка,
+	Препараты.ДействующееВещество КАК ДействующееВещество
+ПОМЕСТИТЬ ВТ_Препараты2
+ИЗ
+	Справочник.Препараты КАК Препараты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналогиПрепаратов.Препарат КАК Препарат,
+	АналогиПрепаратов.Аналог КАК Аналог
+ПОМЕСТИТЬ ВТ_Аналоги
+ИЗ
+	РегистрСведений.АналогиПрепаратов КАК АналогиПрепаратов
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Препараты1.Ссылка КАК Препарат,
+	ВТ_Препараты2.Ссылка КАК Дженерик,
+	НЕ ВТ_Препараты2.Ссылка ЕСТЬ NULL КАК ЭтоДженерик,
+	НЕ ВТ_Аналоги.Аналог ЕСТЬ NULL КАК ЭтоАналог,
+	ВТ_Аналоги.Аналог КАК Аналог
+ПОМЕСТИТЬ ВТ_АналогиДженерики
+ИЗ
+	ВТ_Препараты1 КАК ВТ_Препараты1
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_Препараты2 КАК ВТ_Препараты2
+		ПО ВТ_Препараты1.ДействующееВещество = ВТ_Препараты2.ДействующееВещество
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Аналоги КАК ВТ_Аналоги
+		ПО ВТ_Препараты1.Ссылка = ВТ_Аналоги.Препарат
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_АналогиДженерики.Препарат КАК Препарат,
+	ВТ_АналогиДженерики.ЭтоДженерик КАК ЭтоДженерик,
+	ВТ_АналогиДженерики.ЭтоАналог КАК ЭтоАналог,
+	ВТ_АналогиДженерики.Дженерик КАК Дженерик,
+	ВТ_АналогиДженерики.Аналог КАК Аналог,
+	ВЫБОР
+		КОГДА ВТ_АналогиДженерики.Препарат &lt;&gt; ВТ_АналогиДженерики.Дженерик
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Поле1
+ИЗ
+	ВТ_АналогиДженерики КАК ВТ_АналогиДженерики</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Препарат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дженерик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоДженерик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоАналог</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналог</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Препарат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>08f2c618-e89b-4829-80be-a551a514c031</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ЭтоДженерик</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дженерик</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>10d1a656-9322-4643-bb9d-fa143980b69b</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ЭтоАналог</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аналог</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>cc93b63f-1703-4783-8568-54d342d330c2</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Препарат</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -241,10 +241,12 @@
 			<Enum>ФормыВыпуска</Enum>
 			<Enum>Приоритеты</Enum>
 			<Enum>РезультатЛечения</Enum>
+			<Report>ОтчетАналоги</Report>
 			<DataProcessor>ПоискАналогов</DataProcessor>
 			<DataProcessor>ВводДанныхПациента</DataProcessor>
 			<DataProcessor>ПодборЛС</DataProcessor>
 			<DataProcessor>ВводДанныхВБазу</DataProcessor>
+			<DataProcessor>ПоискАналогов_2</DataProcessor>
 			<InformationRegister>РезультатЛечения</InformationRegister>
 			<InformationRegister>АналогиПрепаратов</InformationRegister>
 		</ChildObjects>

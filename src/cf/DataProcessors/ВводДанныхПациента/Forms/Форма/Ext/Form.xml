@@ -115,7 +115,6 @@
 						<ExtendedTooltip name="СхемыЛеченийУправлениеПоискомРасширеннаяПодсказка" id="22"/>
 					</SearchControlAddition>
 					<Events>
-						<Event name="OnActivateRow">СхемыЛеченийПриАктивизацииСтроки</Event>
 						<Event name="OnChange">СхемыЛеченийПриИзменении</Event>
 					</Events>
 					<ChildItems>
